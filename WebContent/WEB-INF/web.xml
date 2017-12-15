@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ProjetSLAM4</display-name>
+ <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+ <servlet>
+	<servlet-name>ajoutstation</servlet-name>
+	<servlet-class>com.test.servlets.AjoutStation</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ajoutstation</servlet-name>
+	<url-pattern>/ajoutstation</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>listestations</servlet-name>
+	<servlet-class>com.test.servlets.ListeStations</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>listestations</servlet-name>
+	<url-pattern>/listestations</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+	<servlet-name>inscription</servlet-name>
+	<servlet-class>com.test.servlets.Inscription</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>inscription</servlet-name>
+	<url-pattern>/inscription</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>listeinscrits</servlet-name>
+	<servlet-class>com.test.servlets.ListeInscrits</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>listeinscrits</servlet-name>
+	<url-pattern>/listeinscrits</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>GestionTestJDBC</servlet-name>
+	<servlet-class>com.test.servlets.GestionTestJDBC</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>GestionTestJDBC</servlet-name>
+	<url-pattern>/testjdbc</url-pattern>
+</servlet-mapping>
+
+<listener>
+    <listener-class>com.test.config.InitialisationDaoFactory</listener-class>
+</listener>
+
+</web-app>
+
